@@ -1,0 +1,47 @@
+global: {}
+
+ibm-catalogs:
+  catalogs:
+    commonservices:
+      name: opencloud-operators
+      catalog:
+        displayName: IBMCS Operators
+        publisher: IBM
+        sourceType: grpc
+        image: docker.io/ibmcom/ibm-common-service-catalog:latest
+        updateStrategy:
+          registryPoll:
+            interval: 45m
+
+    ibmoperators:
+      name: ibm-operator-catalog
+      catalog:
+        displayName: "IBM Operator Catalog"
+        publisher: IBM
+        sourceType: grpc
+        image: icr.io/cpopen/ibm-operator-catalog
+        updateStrategy:
+          registryPoll:
+            interval: 45m
+
+    automationfoundation:
+      name: iaf-core-operators
+      catalog:
+        displayName: IAF Core Operators
+        publisher: IBM
+        sourceType: grpc
+        image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+        updateStrategy:
+          registryPoll:
+            interval: 45m
+
+    processmining:
+      name: ibm-automation-processminings
+      catalog:
+        displayName: IBM ProcessMining Operators
+        publisher: IBM
+        sourceType: grpc
+        image: icr.io/cpopen/processmining-operator-catalog
+        updateStrategy:
+          registryPoll:
+            interval: 45m
